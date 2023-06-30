@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PRECIOUS ONLINE WATCH STORE</title>
+  <style>
+    body {
+      background-color: yellow;
+    }
+    
+    .watch-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .watch {
+      width: 300px;
+      margin: 20px;
+      border: 1px solid blueviolet;
+      padding: 10px;
+      background-color: honeydew;
+    }
+    
+    .watch img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .watch h3 {
+      margin-top: 10px;
+      color: indigo;
+    }
+    
+    .watch p {
+      margin-top: 5px;
+      color: maroon;
+    }
+    
+    .cart-container {
+      border: 1px solid mediumvioletred;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: aqua;
+    }
+    
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      align-items: center; /* Align items vertically */
+    }
+    
+    .cart-item p {
+      margin: 0; /* Remove default margin */
+    }
+    
+    .checkout-button {
+      display: block;
+      margin-top: 10px;
+      background-color: mediumseagreen;
+      color: red;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    .navbar {
+      background-color: lawngreen;
+      overflow: hidden;
+    }
+    
+    .navbar a {
+      float: left;
+      padding: 12px;
+      color: mediumvioletred;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    
+    .navbar a:hover {
+      background-color: maroon;
+      color: darkorchid;
+    }
+    .navbar a.active {
+      background-color: #e67e22;
+      color: white;
+    }
+    /* CSS styles (unchanged) */
+  </style>
+</head>
+<body>
+  
+    <div class="navbar">
+      <div class="navbar">
+        <a href="http://eve.kean.edu/~khadkak/watch/homepage.html">Homepage</a>
+        <a href="http://eve.kean.edu/~khadkak/watch/About us.html">Contact Us</a>
+        <a href="http://eve.kean.edu/~khadkak/watch/Discover.html">Watch Portfolio</a>
+        <a href="http://eve.kean.edu/~khadkak/watch/Rating page.html">Rating Page</a>
+        <a href="http://eve.kean.edu/~khadkak/watch/joinus.html">Join Us</a>
+        <a href="http://eve.kean.edu/~khadkak/watch/store.html">My store</a>
+        <a href="http://eve.kean.edu/~khadkak/watch/store.html" class="active">My Store</a> <!-- Added 'active' class to the My Store link -->
+        <a href="http://eve.kean.edu/~khadkak/watch/My play.html">Play & Win</a>
+        <a href="http://eve.kean.edu/~khadkak/watch/donate.html">Donate</a>
+        <a href="http://eve.kean.edu/~khadkak/watch/About us.html">About Us</a>
+    </div>
+  <!-- Navbar (unchanged) -->
+
+  <h1 style="color: maroon;">******************PRECIOUS ONLINE WATCH STORE******************</h1>
+
+  <!-- Watches (unchanged) -->
+
+  <div class="watch-container">
+    <div class="watch" style="background-color: lightpink;">
+      <img src="http://eve.kean.edu/~khadkak/94jh.gif" alt="Watch 1">
+      <h3>APPLE WATCH</h3>
+      <p>$900</p>
+      <p>Description: This Apple Watch is a cool gadget made by Apple that you wear on your wrist like a regular watch.</p>
+      <button onclick="addToCart('APPLE WATCH', 900)">Add to Cart</button>
+    </div>
+    
+    <div class="watch" style="background-color: magenta;">
+      <img src="http://eve.kean.edu/~khadkak/ticwatch pro 3.gif" alt="Watch 2">
+      <h3>TICWATCH PRO</h3>
+      <p>$998</p>
+      <p>Description: The TicWatch Pro 3 is a versatile smartwatch powered by Wear OS. It has a dual-display, health tracking features, and long battery life.</p>
+      <button onclick="addToCart('TICWATCH PRO', 998)">Add to Cart</button>
+    </div>
+    
+    <div class="watch" style="background-color: lightgreen;">
+        <img src="http://eve.kean.edu/~khadkak/huwai.gif" alt="Watch 3">
+        <h3>HUAWEI WATCH</h3>
+        <p>$810</p>
+        <p>Description: The Huawei Watch GT2 is a stylish and feature-rich smartwatch.</p>
+        <button onclick="addToCart('HUAWEI WATCH', 810)">Add to Cart</button>
+      </div>
+  
+      <div class="watch" style="background-color: mediumslateblue;">
+        <img src="http://eve.kean.edu/~khadkak/garmin venu.gif" alt="Watch 4">
+        <h3>GARMIN VENU</h3>
+        <p>$700</p>
+        <p>Description: The Garmin Venu  is a high-performance smartwatch designed for fitness enthusiasts and outdoor adventurers. It features a vibrant AMOLED display, built-in GPS, advanced health monitoring, and sports tracking capabilities. </p>
+        <button onclick="addToCart('GARMIN VENU', 700)">Add to Cart</button>
+      </div>
+  
+      <div class="watch" style="background-color: mediumvioletred;">
+        <img src="http://eve.kean.edu/~khadkak/fitbits.gif" alt="Watch 5">
+        <h3>FITBIT VERSA</h3>
+        <p>$600</p>
+        <p>Description: The Fitbit Versa is a popular smartwatch that focuses on health and fitness tracking. It features an AMOLED display, built-in GPS, and a variety of sensors to monitor your activity, sleep, and heart rate. With access to the Fitbit app ecosystem, it offers personalized insights, guided workouts, and supports contactless payments. It is a great choice for fitness enthusiasts looking for a well-rounded smartwatch experience.</p>
+        <button onclick="addToCart('FITBIT VERSA', 600)">Add to Cart</button>
+      </div>
+  
+      <div class="watch" style="background-color: chartreuse;">
+        <img src="http://eve.kean.edu/~khadkak/Galaxy1.gif" alt="Watch 6">
+        <h3>GALAXY WATCH</h3>
+        <p>$799</p>
+        <p>Description: This Samsung Galaxy Watch is a smartwatch with many great features, and it runs on the Tizen operating system and can track your health and fitness, like your heart rate, sleep, and stress levels.</p>
+        <button onclick="addToCart('GALAXY WATCH', 799)">Add to Cart</button>
+      </div>
+  
+      <div class="watch" style="background-color: yellowgreen;">
+        <img src="http://eve.kean.edu/~khadkak/fossil.gif" alt="Watch 7">
+        <h3>FOSSIL WATCH</h3>
+        <p>$908</p>
+        <p>Description: Fossil makes really cool watches that look great and work well. They have lots of different styles for boys and girls.</p>
+        <button onclick="addToCart('FOSSIL WATCH', 908)">Add to Cart</button>
+      </div>
+  
+      <div class="watch" style="background-color: blueviolet;">
+        <img src="http://eve.kean.edu/~khadkak/fes.gif" alt="Watch 8">
+        <h3>FES WATCH</h3>
+        <p>$880</p>
+        <p>Description: This FES Watch is a special kind of watch that mixes style and technology.It's made by Sony and is meant to be a fashion accessory that people can change the look of to match their own taste.</p>
+        <button onclick="addToCart('FES WATCH', 880)">Add to Cart</button>
+      </div>
+  
+      <div class="watch" style="background-color: yellow;">
+        <img src="http://eve.kean.edu/~khadkak/minuum.gif" alt="Watch 9">
+        <h3>MINUUM WATCH</h3>
+        <p>$900</p>
+        <p>Description: The Minuum Watch is a smartwatch that has a simple and easy-to-use design.</p>
+        <button onclick="addToCart('MINUUM WATCH', 900)">Add to Cart</button>
+      </div>
+    
+    <!-- Watches (unchanged) -->
+  </div>
+    <!-- Watches (unchanged) -->
+  </div>
+
+  <div class="ShoppingCart">
+    <h2 style="color: red;">VIEW CART</h2>
+    <div id="cart-items"></div>
+    <div class="total">
+      <p>Total Price:</p>
+      <p id="total-price">$0</p>
+    </div>
+    <div class="checkout-btn">
+      <button id="checkout">Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code (updated)
+    // Get all add-to-cart buttons
+    const addToCartButtons = document.querySelectorAll('.watch button');
+
+    // Cart items array
+    const cartItems = [];
+
+    // Add event listener to each add-to-cart button
+    addToCartButtons.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        const watch = button.parentNode;
+        const watchName = watch.querySelector('h3').textContent;
+        const watchPrice = parseInt(watch.querySelector('p').textContent.replace('$', ''));
+        const cartItem = { name: watchName, price: watchPrice };
+        cartItems.push(cartItem);
+        updateCart();
+      });
+    });
+
+    // Update cart items and total price
+    function updateCart() {
+      const cartItemsContainer = document.getElementById('cart-items');
+      cartItemsContainer.innerHTML = '';
+      let totalPrice = 0;
+      cartItems.forEach((item, index) => {
+        const cartItemElement = document.createElement('div');
+        cartItemElement.classList.add('cart-item');
+        const itemNameElement = document.createElement('p');
+        itemNameElement.textContent = item.name;
+        const itemPriceElement = document.createElement('p');
+        itemPriceElement.textContent = `$${item.price}`;
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.addEventListener('click', () => {
+          cartItems.splice(index, 1);
+          updateCart();
+        });
+        cartItemElement.appendChild(itemNameElement);
+        cartItemElement.appendChild(itemPriceElement);
+        cartItemElement.appendChild(removeButton);
+        cartItemsContainer.appendChild(cartItemElement);
+        totalPrice += item.price;
+      });
+      const totalPriceElement = document.getElementById('total-price');
+      totalPriceElement.textContent = `$${totalPrice}`;
+    }
+
+    // Checkout button event listener
+    const checkoutButton = document.getElementById('checkout');
+    checkoutButton.addEventListener('click', () => {
+      alert('Thank you for your purchase!');
+      cartItems.length = 0;
+      updateCart();
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Donate - Online Watch Store</title>
+  <style>
+    /* CSS styles for the navigation bar */
+    .navbar {
+      background-color: palegreen;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      color: #800080;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .navbar a:hover {
+      background-color: #8b4513;
+      color: black;
+    }
+
+    .navbar a.active {
+      background-color: #8b4513;
+      color: black;
+    }
+
+    /* CSS styles for the donation form */
+    .donation-form {
+      max-width: 400px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .donation-form h1 {
+      color: yellowgreen;
+    }
+
+    .donation-form p {
+      margin-top: 10px;
+      color: yellow;
+    }
+
+    .donation-form input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #8a2be2;
+      border-radius: 5px;
+    }
+
+    .donation-form button {
+      background-color: #00fa9a;
+      color: #ff7f50;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .donation-form button:hover {
+      background-color: #ff7f50;
+    }
+
+    .thank-you {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 24px;
+      color: yellow;
+    }
+
+    body {
+      background-color: mediumvioletred;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="http://eve.kean.edu/~khadkak/watch/homepage.html">Homepage</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/About us.html">Contact Us</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/Discover.html">Watch Portfolio</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/Rating page.html">Rating Page</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/joinus.html">Join Us</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/store.html">My store</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/new arrival.html">My arrival</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/My play.html">Play & Win</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/donate.html">Donate</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/About us.html">About Us</a>
+  </div>
+
+  <div class="donation-form">
+    <h1>Donate to Help Needy People</h1>
+    <p>Your contribution will make a difference in the lives of those who need it most. Thank you for your support! We appreciate your generosity!</p>
+    <input type="number" placeholder="Enter donation amount" id="donation-amount" min="1" step="1">
+    <button id="donate">Donate Now</button>
+  </div>
+
+  <div class="thank-you" id="thank-you" style="display: none;">
+    <h1>Thank You for Your Donation!</h1>
+    <p>Your generosity is greatly appreciated. It will help us provide assistance to those in need. Together, we can make a positive impact on their lives. Thank you for your kindness and support!</p>
+  </div>
+
+  <script>
+    // JavaScript code for handling the donation and showing the thank you message
+
+    const donateButton = document.getElementById('donate');
+    const thankYouMessage = document.getElementById('thank-you');
+    const donateLink = document.querySelector('.navbar a[href="http://eve.kean.edu/~khadkak/watch/donate.html"]');
+
+    donateButton.addEventListener('click', () => {
+      const donationAmount = document.getElementById('donation-amount').value;
+      if (donationAmount > 0) {
+        // Simulating donation process (can be replaced with actual payment processing logic)
+        setTimeout(() => {
+          // Hide the donation form
+          document.querySelector('.donation-form').style.display = 'none';
+          // Show the thank you message
+          thankYouMessage.style.display = 'block';
+        }, 2000);
+      }
+    });
+
+    donateLink.classList.add('active');
+  </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Watch Shopping Store - Review</title>
+  <style>
+    /* CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: yellow;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: mediumseagreen;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: maroon;
+      color: black;
+    }
+
+    .navbar a.active {
+      background-color: maroon;
+      color: white;
+    }
+
+    /* Page content styling */
+    .container {
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    /* Form styling */
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid mediumvioletred;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 150px;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .rating label {
+      font-size: 30px;
+      color: yellowgreen;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .rating label:hover,
+    .rating input:checked ~ label {
+      color: #ff9800;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .thank-you-message {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="http://eve.kean.edu/~khadkak/watch/homepage.html">Home Page</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/About us.html">About us</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/Contact us.html">Contact us</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/Discover.html">Watch Portfolio</a>
+    <a class="nav-link active" aria-current="page" href="http://eve.kean.edu/~khadkak/watch/Rating page.html">Rating page</a>
+    <a href= "http://eve.kean.edu/~khadkak/watch/store.html">My Store</a>
+    <a href= "http://eve.kean.edu/~khadkak/watch/new arrival.html">New Arrival</a>
+    <a href= "http://eve.kean.edu/~khadkak/watch/joinus.html">Join Us</a>
+    <a href= "http://eve.kean.edu/~khadkak/watch/My play.html">Play & Win</a>
+    <a href= "http://eve.kean.edu/~khadkak/watch/donate.html">Donate</a>
+  </div>
+
+  <div class="container">
+    <h1>Review</h1>
+    <form id="reviewForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <div class="rating">
+        <input type="radio" id="star5" name="rating" value="5" required>
+        <label for="star5">&#9733;</label>
+        <input type="radio" id="star4" name="rating" value="4" required>
+        <label for="star4">&#9733;</label>
+        <input type="radio" id="star3" name="rating" value="3" required>
+        <label for="star3">&#9733;</label>
+        <input type="radio" id="star2" name="rating" value="2" required>
+        <label for="star2">&#9733;</label>
+        <input type="radio" id="star1" name="rating" value="1" required>
+        <label for="star1">&#9733;</label>
+      </div>
+
+      <label for="review">Review</label>
+      <textarea id="review" name="review" required></textarea>
+
+      <button type="submit">Submit Review</button>
+    </form>
+
+    <div class="thank-you-message" id="thankYouMessage">
+      Thank you for your review!
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code for form submission
+    const form = document.getElementById('reviewForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const rating = document.querySelector('input[name="rating"]:checked').value;
+      const review = document.getElementById('review').value;
+
+      // Perform form validation or further processing here
+
+      // Example: Log the form values to the console
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Rating:', rating);
+      console.log('Review:', review);
+
+      // Show the thank you message
+      thankYouMessage.style.display = 'block';
+
+      // Reset the form after a delay
+      setTimeout(function () {
+        form.reset();
+        thankYouMessage.style.display = 'none';
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Join Us - Precious Online Watch Store</title>
+  <style>
+    /* CSS styles for the navigation bar */
+    .navbar {
+      background-color: blueviolet;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .navbar a:hover {
+      background-color: #e67e22;
+      color: white;
+    }
+
+    .navbar a.active {
+      background-color: #e67e22;
+      color: white;
+    }
+
+    .social-icons a {
+      color: blue;
+      text-decoration: none;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    h1, h2, h3 {
+      color: #8e44ad;
+    }
+
+    ol {
+      color: maroon;
+    }
+
+    body {
+      background-color: yellow;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script>
+    // JavaScript code to highlight the active page in the navbar
+    document.addEventListener("DOMContentLoaded", function() {
+      var navLinks = document.querySelectorAll(".navbar a");
+      for (var i = 0; i < navLinks.length; i++) {
+        navLinks[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          if (current.length > 0) {
+            current[0].classList.remove("active");
+          }
+          this.classList.add("active");
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <a href="http://eve.kean.edu/~khadkak/watch/homepage.html">Home Page</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/About us.html">About us</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/Contact us.html">Contact us</a>
+    <a href="http://eve.kean.edu/~khadkak/watch/Discover.html">Watch Portfolio</a>
+    <a href="joinus.html" class="active">Join Us</a> 
+    <a href= "http://eve.kean.edu/~khadkak/watch/store.html">My Store</a>
+    <a href= "http://eve.kean.edu/~khadkak/watch/new arrival.html">New Arrival</a>
+    <a href= "http://eve.kean.edu/~khadkak/watch/Rating page.html">Rating Page</a>
+    <a href= "http://eve.kean.edu/~khadkak/watch/My play.html">Play & Win</a>
+    <a href= "http://eve.kean.edu/~khadkak/watch/donate.html">Donate</a>
+  </div>
+  <span class="social-icons">
+    <a href="https://www.facebook.com/AuthenticWatchDream/"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/wc_auction?lang=en"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/precious_watch/?hl=en"><i class="fab fa-instagram"></i></a>
+  </span>
+
+  <h1>Join Us at Our Online Precious Watch Store</h1>
+  <p>Welcome to our online watch store! We invite you to become a part of our growing community of watch enthusiasts. By joining us, you'll gain access to an exclusive selection of stylish and high-quality timepieces, along with a range of benefits and perks.</p>
+  
+  <h2>Why Join Us:</h2>
+  <ol>
+    <li><strong>Curated Collection:</strong> Explore our carefully curated collection of watches, featuring a diverse range of styles, brands, and price points. Whether you're seeking a classic timepiece or a modern smartwatch, we have something to suit every taste and occasion.</li>
+    <li><strong>Exclusive Offers:</strong> As a member, you'll have access to exclusive offers and promotions. Stay updated on the latest deals and discounts, ensuring that you never miss out on an opportunity to own your dream watch at a great price.</li>
+    <li><strong>New Arrivals and Pre-Order Opportunities:</strong> Be the first to discover new arrivals from renowned watch brands. Enjoy the privilege of pre-ordering limited-edition and highly sought-after watches before they hit the market, securing your place as a true watch connoisseur.</li>
+    <li><strong>Personalized Recommendations:</strong> We value your preferences, and our dedicated team will provide personalized watch recommendations based on your style, interests, and budget. Let us assist you in finding the perfect watch that reflects your unique personality and enhances your individual style.</li>
+    <li><strong>Insider Updates:</strong> Stay informed about the latest trends, innovations, and industry insights. Gain access to informative articles, expert reviews, and behind-the-scenes content that will deepen your knowledge and passion for watches.</li>
+    <li><strong>Community Engagement:</strong> Engage with fellow watch enthusiasts through our interactive community forums and social media channels. Share your watch stories, ask questions, and connect with like-minded individuals who share your appreciation for the artistry and craftsmanship of timepieces.</li>
+  </ol>
+  
+  <h3>Join us today and embark on a journey of timeless elegance and sophistication.</h3>
+  <p>Join us now to unlock the world of watches and become a valued member of our online watch store. Together, let's celebrate the beauty and significance of watches in our lives. Join us today and discover the perfect watch that will accompany you on every momentous occasion.</p>
+</body>
+</html>

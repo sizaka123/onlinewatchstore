@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>"Play and Win Watch: Embark on a thrilling journey of excitement and luxury with our exclusive 'Play and Win Watch' promotion. Engage in interactive games and captivating contests, and unlock your chance to win a stunning timepiece from our exquisite collection. </title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    .nav-link.active {
+      background-color: maroon;
+      color: white;
+    }
+
+    .magic-star {
+      font-size: 100px;
+      animation: glow 1s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% {
+        color: yellow;
+        text-shadow: 0 0 10px yellow;
+      }
+      100% {
+        color: gold;
+        text-shadow: 0 0 20px gold;
+      }
+    }
+
+    .cell {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #f5f5f5;
+      border: 2px solid #ccc;
+      transition: background-color 0.3s ease;
+    }
+
+    .cell:hover {
+      background-color: #e0e0e0;
+    }
+
+    .cell:nth-child(3n+1) {
+      background-color: #FF1744;
+    }
+
+    .cell:nth-child(3n+2) {
+      background-color: #2979FF;
+    }
+
+    .cell:nth-child(3n+3) {
+      background-color:yellowgreen;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="http://eve.kean.edu/~khadkak/watch/homepage.html">Home Page</a></li>
+      <li><a href="http://eve.kean.edu/~khadkak/watch/About us.html">About us</a></li>
+      <li><a href="http://eve.kean.edu/~khadkak/watch/Contact us.html">Contact us</a></li>
+      <li><a href="http://eve.kean.edu/~khadkak/watch/Discover.html">Watch Portfolio</a></li>
+      <li><a href="http://eve.kean.edu/~khadkak/watch/Rating page.html">Rating page</a></li>
+      <li><a class="nav-link active" aria-current="page" href="http://eve.kean.edu/~khadkak/watch/My play.html">Play & Win</a></li>
+      <li><a href="http://eve.kean.edu/~khadkak/watch/store.html">My Store</a></li>
+      <li><a href="http://eve.kean.edu/~khadkak/watch/new arrival.html">New Arrival</a></li>
+      <li><a href="http://eve.kean.edu/~khadkak/watch/joinus.html">Join Us</a></li>
+      <li><a href="http://eve.kean.edu/~khadkak/watch/donate.html">Donate</a></li>
+    </ul>
+  </nav>
+
+  <h1>"Dear Valued Customers, Engage in the thrilling game of "TIC TAC TOE" and stand a chance to win a truly mesmerizing and awe-inspiring Win Watch: Embark on a thrilling journey of excitement and luxury with our exclusive 'Play and Win Watch' promotion. Engage in interactive games and captivating contests, and unlock your chance to win a stunning timepiece from our exquisite collection. </h1>
+
+  <div id="board">
+    <div class="cell" onclick="makeMove(0)"></div>
+    <div class="cell" onclick="makeMove(1)"></div>
+    <div class="cell" onclick="makeMove(2)"></div>
+    <div class="cell" onclick="makeMove(3)"></div>
+    <div class="cell" onclick="makeMove(4)"></div>
+    <div class="cell" onclick="makeMove(5)"></div>
+    <div class="cell" onclick="makeMove(6)"></div>
+    <div class="cell" onclick="makeMove(7)"></div>
+    <div class="cell" onclick="makeMove(8)"></div>
+  </div>
+
+  <p id="message"></p>
+
+  <script src="script.js"></script>
+  <script>
+    // Highlight the "Play & Win" button on navbar when it is clicked
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', function(event) {
+        navLinks.forEach((link) => link.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+
+    function checkWin() {
+      // Your win checking logic here
+
+      // Assuming win occurs, show the magic star glowing up
+      const magicStar = document.querySelector('.magic-star');
+      magicStar.classList.add('glow');
+    }
+  </script>
+</body>
+</html>
